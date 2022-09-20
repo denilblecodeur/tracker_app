@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script>
+        var url = "{{url}}";
+        var prix = "{{prix}}";
+        var email = "{{email}}";
+        var retour = "{{retour}}";
+    </script>
+</head>
+<body onload="putValue(url,prix,email,retour)">
+<article class="l-design-widht">
+    <h1><span id="title">RETURN</span><br>Créez une alerte pour acheter au bon prix</h1>
+  
+    <p>Entrez l'URL du produit à suivre, le prix souhaité ainsi que votre mail, et soyez notifié dès que le produit est au bon prix.</p>
+    
+    <div class="card">
+      <h2>L'URL</h2>
+      <label class="input">
+        <input id="url" class="input__field" type="text" placeholder="" value=""/>
+      </label>
+    </div>
+    <div class="card card--inverted">
+      <h2>Le prix souhaité</h2>
+      <label class="input">
+        <input id="prix" class="input__field" type="text" placeholder="" value=""/>
+      </label> 
+    </div>
+      <div class="card card--accent">
+      <h2>Votre mail</h2>
+      <label class="input">
+        <input id="email" class="input__field" type="text" placeholder="" value=""/>
+      </label>
+    </div>
+</article>
+<article class="r-design-width">
+    <div id="returned">
+    </div>
+</article>
+</body>
+</html>

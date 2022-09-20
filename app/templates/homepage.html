@@ -1,0 +1,44 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/script.js') }}"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+</head>
+<body>
+<article class="l-design-widht">
+    <h1><span id="title">Amazon.com</span><br>Créez une alerte pour acheter au bon prix</h1>
+  
+    <p>Entrez l'URL du produit à suivre, le prix souhaité ainsi que votre mail, et soyez notifié dès que le produit est au bon prix.</p>
+    <div class="card" id="retour_affiche">
+        <iframe id="ifr" src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" frameBorder="0" ></iframe>
+        <h2 id="returned">Prix actuellement trop élevé, nous vous notifierons lorsqu'il sera plus bas.</h2>
+        <div class="button-group" id="reset_button">
+            <button type="button" onclick="reload_page();">Effectuer une nouvelle recherche</button>
+        </div>
+    </div>
+    <div class="card">
+      <h2>L'URL</h2>
+      <label class="input">
+        <input id="url" class="input__field" type="text" placeholder="https://" onfocus="this.placeholder=''"/>
+      </label>
+    </div>
+    <div class="card card--inverted">
+      <h2>Le prix souhaité</h2>
+      <label class="input">
+        <input id="prix" class="input__field" type="text" placeholder="0,00€" onfocus="this.placeholder=''"/>
+      </label> 
+    </div>
+    <div class="card card--accent">
+      <h2>Votre mail</h2>
+      <label class="input">
+        <input id="email" class="input__field" type="text" placeholder="dupont@gmail.com" onfocus="this.placeholder=''"/>
+      </label>
+      
+      <div class="button-group" id="submit_button">
+        <button type="button" onclick="getValue();">Alertez-moi</button>
+      </div>
+    </div>
+</article>
+</body>
+</html>
